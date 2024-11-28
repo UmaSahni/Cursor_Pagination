@@ -37,15 +37,6 @@ const BASE_URL = import.meta.env.VITE_BASE_URL
     
     <div className="wrapper">
       <h1>Order Details</h1>
-    <div className="filters">
-  <div className="sort">
-    <select>
-      <option value="asc">low-to-high</option>
-      <option value="desc">high-to-low</option>
-    </select>
-  </div>
-</div>
-
 
       {isLoading && <p>Loading...</p>}
       {isError && <p style={{ color: "red" }}>Error: {error}</p>}
@@ -101,7 +92,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL
             
       )}
       {
-        isFetching && <p>Loding....</p>
+        isFetching && !isLoading && !isError && <p>Loding More Data</p>
       }
     </div>
    
