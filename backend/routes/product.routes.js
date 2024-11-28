@@ -9,7 +9,7 @@ productRouter.get("/", async (req, res) => {
     const sortField = req.query.sort || "_id"; 
     const sortDirection = req.query.sortDirection === "desc" ? -1 : 1;
 
-    const baseUrl = `${req.protocol}://${req.get("host")}${req.baseUrl}`; // Base URL for the API
+    const baseUrl = `https://cursor-pagination-dq7l.onrender.com/products`; // Base URL for the API
     
     
     // Filter for cursor
